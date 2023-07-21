@@ -32,8 +32,7 @@ My opinionated context module that integrates with my other Terraform modules.
 
 ```
 module "context" {
-  source    = "git@github.com:bendoerr/terraform-null-context"
-  version   = "0.2.0"
+  source    = "git@github.com:bendoerr/terraform-null-context?ref=v0.2.0"
   namespace = "brd"
   role      = "production'
   region    = "us-east-1"
@@ -117,7 +116,7 @@ Distributed under the MIT License. See [LICENSE](https://github.com/bendoerr/ter
 
 ## Authors
 
-* **Benjamin R. Doerr** - *Terraformer* - [Benjamin R. Doerr](https://github.com/bendoerr/) - *Build Ben's Terraform Modules*
+* **Benjamin R. Doerr** - *Terraformer* - [Benjamin R. Doerr](https://github.com/bendoerr/) - *Built Ben's Terraform Modules*
 
 ## Acknowledgements
 
