@@ -1,8 +1,10 @@
 <br/>
 <p align="center">
   <a href="https://github.com/bendoerr/terraform-null-context">
-    <source media="(prefers-color-scheme: dark)" srcset="docs/dark.png">
-    <img src="docs/logo-light.png" alt="Logo">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="docs/logo-dark.png">
+      <img src="docs/logo-light.png" alt="Logo">
+    </picture>
   </a>
 
 <h3 align="center">Ben's Terraform Null Context Module</h3>
