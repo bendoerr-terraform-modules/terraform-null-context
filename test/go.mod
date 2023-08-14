@@ -3,7 +3,7 @@ module github.com/bendoerr/terraform-null-context/test
 go 1.20
 
 require (
-	github.com/gruntwork-io/terratest v0.43.9
+	github.com/gruntwork-io/terratest v0.43.12
 	github.com/kr/pretty v0.3.1
 )
 
