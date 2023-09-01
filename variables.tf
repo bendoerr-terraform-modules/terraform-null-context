@@ -71,6 +71,14 @@ variable "instance_short" {
     EOT
 }
 
+variable "project" {
+  type = string
+  default = ""
+  description = <<-EOT
+    Unique identifier for this project
+    EOT
+}
+
 variable "attributes" {
   type        = list(string)
   default     = []
@@ -96,6 +104,7 @@ variable "context" {
     region_short   = ""
     role           = ""
     role_short     = ""
+    project        = ""
     tags           = {}
   }
   description = "Allows the merging of an existing context with this one."
