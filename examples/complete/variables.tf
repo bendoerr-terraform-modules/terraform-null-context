@@ -71,6 +71,14 @@ variable "instance_short" {
     EOT
 }
 
+variable "project" {
+  type = string
+  default = ""
+  description = <<-EOT
+    Unique identifier for this project
+    EOT
+}
+
 variable "attributes" {
   type    = list(string)
   default = []

@@ -38,6 +38,11 @@ output "instance_short" {
   description = "The evaluated instance"
 }
 
+output "project" {
+  value = var.project
+  description = "The evaluated project"
+}
+
 output "dns_namespace" {
   value = local.dns_namespace
   description = "A DNS namespace"
@@ -65,6 +70,7 @@ output "shared" {
     instance       = local.gvn_instance
     instance_short = local.instance_short
     namespace      = local.gvn_namespace
+    project        = var.project
     tags           = local.tags
   }
   description = "Used for sharing the context with other modules"
