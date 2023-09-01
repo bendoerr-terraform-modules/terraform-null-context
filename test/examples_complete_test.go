@@ -42,6 +42,7 @@ func TestExamplesComplete(t *testing.T) {
 		Region_Short   string
 		Role           string
 		Role_Short     string
+		Project        string
 		Tags           map[string]string
 	}
 
@@ -65,12 +66,14 @@ func TestExamplesComplete(t *testing.T) {
 				Region_Short:   "uw2",
 				Role:           "production",
 				Role_Short:     "prd",
+				Project:        "test",
 				Tags: map[string]string{
 					"ExtraTag":  "ExtraTagValue",
 					"Instance":  "demo",
 					"Region":    "us-west-2",
 					"Role":      "production",
 					"Workspace": "default",
+					"Project":   "test",
 				},
 			},
 		},

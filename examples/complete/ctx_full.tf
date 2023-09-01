@@ -8,6 +8,7 @@ module "ctx_full" {
   region_short   = var.region_short
   instance       = var.instance
   instance_short = var.instance_short
+  project        = var.project
   attributes     = var.attributes
   tags           = var.tags
 }

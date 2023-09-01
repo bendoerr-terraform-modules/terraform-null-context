@@ -49,11 +49,13 @@ locals {
   region_tags         = { "Region" = local.gvn_region }
   instance_tags       = { "Instance" = local.gvn_instance }
   context_worksp_tags = { "Workspace" = terraform.workspace }
+  project_tags        = { "Project" = var.project }
   tags                = merge(
     local.gvn_tags,
     local.gvn_role != "" ? local.role_tags : {},
     local.gvn_region != "" ? local.region_tags : {},
     local.gvn_instance != "" ? local.instance_tags : {},
+    var.project != "" ? local.project_tags : {},
     terraform.workspace != "" ? local.context_worksp_tags : {},
   )
 }
