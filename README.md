@@ -1,6 +1,6 @@
 <br/>
 <p align="center">
-  <a href="https://github.com/bendoerr/terraform-null-context">
+  <a href="https://github.com/bendoerr-terraform-modules/terraform-null-context">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="docs/logo-dark.png">
       <img src="docs/logo-light.png" alt="Logo">
@@ -13,16 +13,18 @@
     This is how I do it.
     <br/>
     <br/>
-    <a href="https://github.com/bendoerr/terraform-null-context"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/bendoerr-terraform-modules/terraform-null-context"><strong>Explore the docs »</strong></a>
     <br/>
     <br/>
-    <a href="https://github.com/bendoerr/terraform-null-context/issues">Report Bug</a>
+    <a href="https://github.com/bendoerr-terraform-modules/terraform-null-context/issues">Report Bug</a>
     .
-    <a href="https://github.com/bendoerr/terraform-null-context/issues">Request Feature</a>
+    <a href="https://github.com/bendoerr-terraform-modules/terraform-null-context/issues">Request Feature</a>
   </p>
 </p>
 
-![Contributors](https://img.shields.io/github/contributors/bendoerr/terraform-null-context?color=dark-green) ![License](https://img.shields.io/github/license/bendoerr/terraform-null-context)
+![Contributors](https://img.shields.io/github/contributors/bendoerr-terraform-modules/terraform-null-context?color=dark-green) ![Issues](https://img.shields.io/github/issues/bendoerr-terraform-modules/terraform-null-context) ![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/bendoerr-terraform-modules/terraform-null-context/test.yml)
+![GitHub tag (with filter)](https://img.shields.io/github/v/tag/bendoerr-terraform-modules/terraform-null-context?filter=v*)
+![License](https://img.shields.io/github/license/bendoerr-terraform-modules/terraform-null-context)
 
 ## About The Project
 
@@ -32,7 +34,7 @@ My opinionated context module that integrates with my other Terraform modules.
 
 ```
 module "context" {
-  source    = "git@github.com:bendoerr/terraform-null-context?ref=v0.2.0"
+  source    = "git@github.com:bendoerr-terraform-modules/terraform-null-context?ref=v0.4.0"
   namespace = "brd"
   role      = "production'
   region    = "us-east-1"
@@ -93,12 +95,12 @@ No resources.
 
 ## Roadmap
 
-See the [open issues](https://github.com/bendoerr/terraform-null-context/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/bendoerr-terraform-modules/terraform-null-context/issues) for a list of proposed features (and known issues).
 
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-* If you have suggestions for adding or removing projects, feel free to [open an issue](https://github.com/bendoerr/terraform-null-context/issues/new) to discuss it, or directly create a pull request after you edit the *README.md* file with necessary changes.
+* If you have suggestions for adding or removing projects, feel free to [open an issue](https://github.com/bendoerr-terraform-modules/terraform-null-context/issues/new) to discuss it, or directly create a pull request after you edit the *README.md* file with necessary changes.
 * Please make sure you check your spelling and grammar.
 * Create individual PR for each suggestion.
 
@@ -112,7 +114,7 @@ Contributions are what make the open source community such an amazing place to b
 
 ## License
 
-Distributed under the MIT License. See [LICENSE](https://github.com/bendoerr/terraform-null-context/blob/main/LICENSE.txt) for more information.
+Distributed under the MIT License. See [LICENSE](https://github.com/bendoerr-terraform-modules/terraform-null-context/blob/main/LICENSE.txt) for more information.
 
 ## Authors
 
