@@ -38,3 +38,8 @@ updates:
           - "patch"
     commit-message:
       prefix: "⬆️ (deps-ghaction):"
+
+  - package-ecosystem: gomod
+    directory: /test
+    schedule:
+      interval: daily
