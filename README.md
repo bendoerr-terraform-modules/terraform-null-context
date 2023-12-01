@@ -133,6 +133,14 @@ for more information.
   [Benjamin R. Doerr](https://github.com/bendoerr/) - _Built Ben's Terraform
   Modules_
 
+## Supported Versions
+
+Only the latest tagged version is supported.
+
+## Reporting a Vulnerability
+
+See [README.md](README.md).
+
 ## Acknowledgements
 
 - [ShaanCoding (ReadME Generator)](https://github.com/ShaanCoding/ReadME-Generator)
