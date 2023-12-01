@@ -1,0 +1,129 @@
+name: Lint
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened]
+
+jobs:
+  tflint:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: tflint
+        uses: reviewdog/action-tflint@v1
+        with:
+          github_token: ${{ github.token }}
+          reporter: github-pr-review
+          fail_on_error: "false"
+          filter_mode: file
+          tflint_init: true
+          flags: --no-module --recursive
+  trivy:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: trivy
+        uses: reviewdog/action-trivy@main
+        with:
+          github_token: ${{ github.token }}
+          reporter: github-pr-review
+          fail_on_error: "false"
+          filter_mode: file
+  golangci-lint:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: golangci-lint
+        uses: reviewdog/action-golangci-lint@v2
+        with:
+          github_token: ${{ github.token }}
+          reporter: github-pr-review
+          fail_on_error: "false"
+          filter_mode: file
+          workdir: test/
+          go_version_file: test/go.mod
+          golangci_lint_flags: --verbose --presets bugs,comment,complexity,error,format,import,metalinter,module,performance,style,unused --fast --exclude-use-default --tests --timeout 120s ./...
+  prettier:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: create package.json
+        run: |
+          echo -e '{"devDependencies": {"prettier": "^3.1.0"}}' > package.json
+      - name: prettier
+        uses: EPMatt/reviewdog-action-prettier@v1
+        with:
+          github_token: ${{ github.token }}
+          reporter: github-pr-review
+          fail_on_error: "false"
+          filter_mode: file
+  misspell:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: misspell
+        uses: reviewdog/action-misspell@v1
+        with:
+          github_token: ${{ github.token }}
+          reporter: github-pr-review
+          fail_on_error: "false"
+          filter_mode: file
+          exclude: |
+            ./.git/*
+            ./.cache/*
+  alex:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: alex
+        uses: reviewdog/action-alex@v1
+        with:
+          github_token: ${{ github.token }}
+          reporter: github-pr-review
+          fail_on_error: "false"
+          filter_mode: file
+          alex_flags: |
+            * .github/* .github/workflows/* docs/* test/* examples/complete/*
+  markdownlint:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: markdownlint
+        uses: reviewdog/action-markdownlint@v0
+        with:
+          github_token: ${{ github.token }}
+          reporter: github-pr-review
+          fail_on_error: "false"
+          filter_mode: file
+          markdownlint_flags: |
+            --disable MD033 MD013 -- .
+  actionlint:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: actionlint
+        uses: reviewdog/action-actionlint@v1
+        with:
+          github_token: ${{ github.token }}
+          reporter: github-pr-review
+          fail_on_error: "false"
+          filter_mode: file

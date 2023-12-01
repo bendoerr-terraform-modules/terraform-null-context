@@ -14,7 +14,7 @@ updates:
       prefix: "⬆️ (deps-tf):"
 
   - package-ecosystem: "gomod"
-    directory: "/test"
+    directory: "/"
     schedule:
       interval: "weekly"
     groups:
@@ -38,4 +38,3 @@ updates:
           - "patch"
     commit-message:
       prefix: "⬆️ (deps-ghaction):"
-
