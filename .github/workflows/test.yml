@@ -1,13 +1,16 @@
-name: Pull Request
+name: Test
 on:
   push:
     branches: [main]
   pull_request:
     branches: [main]
-    types: [opened, synchronize, reopened, closed, labeled, unlabeled]
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
 
 jobs:
-  context:
+  terratest:
     runs-on: ubuntu-latest
     steps:
       - name: Harden Runner
@@ -15,7 +18,7 @@ jobs:
         with:
           egress-policy: audit
 
-      - name: Run Terratest
+      - name: terratest
         uses: cloudposse/github-action-terratest@bcc438f66e180dcaafcacdf8644967dea9eaf7d2 # main
         with:
           sourceDir: test
