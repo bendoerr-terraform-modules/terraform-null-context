@@ -4,6 +4,7 @@ variable "namespace" {
     Element to ensure resources are generated with names that are globally
     unique and do not collide. This should be a short key such as initials.
     EOT
+  nullable = false
 }
 
 variable "environment" {
