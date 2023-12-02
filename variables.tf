@@ -101,3 +101,23 @@ variable "tags" {
   description = "Additional tags to include."
   nullable    = true
 }
+
+variable "context" {
+  type    = any
+  default = {
+    attributes     = []
+    dns_namespace  = ""
+    environment    = ""
+    instance       = ""
+    instance_short = ""
+    namespace      = ""
+    region         = ""
+    region_short   = ""
+    role           = ""
+    role_short     = ""
+    project        = ""
+    tags           = {}
+  }
+  description = "Allows the merging of an existing context with this one."
+  nullable    = true
+}
