@@ -126,7 +126,6 @@ cloud provider you use.
 
 ## Roadmap
 
-
 [<img alt="GitHub issues" src="https://img.shields.io/github/issues/bendoerr-terraform-modules/terraform-null-context?logo=github">](https://github.com/bendoerr-terraform-modules/terraform-null-context/issues)
 
 See the
@@ -134,7 +133,6 @@ See the
 for a list of proposed features (and known issues).
 
 ## Contributing
-
 
 [<img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/bendoerr-terraform-modules/terraform-null-context?logo=github">](https://github.com/bendoerr-terraform-modules/terraform-null-context/pulls)
 
@@ -159,7 +157,6 @@ appreciated**.
 
 ## License
 
-
 [<img alt="GitHub License" src="https://img.shields.io/github/license/bendoerr-terraform-modules/terraform-null-context?logo=opensourceinitiative">](https://github.com/bendoerr-terraform-modules/terraform-null-context/blob/main/LICENSE.txt)
 
 Distributed under the MIT License. See
@@ -167,7 +164,6 @@ Distributed under the MIT License. See
 for more information.
 
 ## Authors
-
 
 [<img alt="GitHub contributors" src="https://img.shields.io/github/contributors/bendoerr-terraform-modules/terraform-null-context?logo=github">](https://github.com/bendoerr-terraform-modules/terraform-null-context/graphs/contributors)
 
