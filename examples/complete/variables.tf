@@ -90,21 +90,3 @@ variable "tags" {
   default = {}
   description = "Additional tags to include."
 }
-
-variable "context" {
-  type = any
-  default = {
-    attributes             = []
-    aws_account_name       = ""
-    aws_account_name_short = ""
-    aws_region             = ""
-    aws_region_short       = ""
-    dns_namespace          = ""
-    environment            = ""
-    instance               = ""
-    instance_short         = ""
-    namespace              = ""
-    tags                   = {}
-  }
-  description = "Allows the merging of an existing context with this one."
-}
