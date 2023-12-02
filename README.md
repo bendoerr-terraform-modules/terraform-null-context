@@ -2,8 +2,8 @@
 <p align="center">
   <a href="https://github.com/bendoerr-terraform-modules/terraform-null-context">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="docs/logo-dark.png">
-      <img src="docs/logo-light.png" alt="Logo">
+      <source media="(prefers-color-scheme: dark)" srcset="https://github.com/bendoerr-terraform-modules/terraform-null-context/raw/main/docs/logo-dark.png">
+      <img src="https://github.com/bendoerr-terraform-modules/terraform-null-context/raw/main/docs/logo-light.png" alt="Logo">
     </picture>
   </a>
 
@@ -22,9 +22,10 @@
   </p>
 </p>
 
-![Contributors](https://img.shields.io/github/contributors/bendoerr-terraform-modules/terraform-null-context?color=dark-green)
-![Issues](https://img.shields.io/github/issues/bendoerr-terraform-modules/terraform-null-context)
-![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/bendoerr-terraform-modules/terraform-null-context/test.yml)
+[![Contributors](https://img.shields.io/github/contributors/bendoerr-terraform-modules/terraform-null-context?color=dark-green)](https://github.com/bendoerr-terraform-modules/terraform-null-context/graphs/contributors)
+![Issues](https://img.shields.io/github/issues/bendoerr-terraform-modules/terraform-null-context) 
+![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/bendoerr-terraform-modules/terraform-null-context/test.yml) 
+![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/bendoerr-terraform-modules/terraform-null-context/lint.yml?label=lint)
 ![GitHub tag (with filter)](https://img.shields.io/github/v/tag/bendoerr-terraform-modules/terraform-null-context?filter=v*)
 ![License](https://img.shields.io/github/license/bendoerr-terraform-modules/terraform-null-context)
 
