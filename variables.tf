@@ -19,7 +19,6 @@ variable "environment" {
 
 variable "role" {
   type        = string
-  default     = ""
   description = <<-EOT
     A simple name for the hosting provider account or workspace. Included in
     tags to ensure that identification is simple across accounts. Examples
@@ -41,7 +40,6 @@ variable "role_short" {
 
 variable "region" {
   type        = string
-  default     = ""
   description = <<-EOT
     Key for the hosting provider region.
     EOT
@@ -81,7 +79,6 @@ variable "instance_short" {
 
 variable "project" {
   type        = string
-  default     = ""
   description = <<-EOT
     Unique identifier for this project
     EOT
