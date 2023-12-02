@@ -169,7 +169,7 @@ Only the latest tagged version is supported.
 
 ## Reporting a Vulnerability
 
-See [README.md](README.md).
+See [SECURITY.md](SECURITY.md).
 
 ## Acknowledgements
 
