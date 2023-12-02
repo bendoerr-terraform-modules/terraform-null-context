@@ -183,3 +183,6 @@ See [SECURITY.md](SECURITY.md).
 
 - [ShaanCoding (ReadME Generator)](https://github.com/ShaanCoding/ReadME-Generator)
 - [CloudPossie (Terraform Null Label - Inspiration)](https://github.com/cloudposse/terraform-null-label)
+- [OpenSSF - Helping me follow best practices](https://openssf.org/)
+- [StepSecurity - Helping me follow best practices](https://app.stepsecurity.io/)
+- [Infracost - Better than AWS Calculator](https://www.infracost.io/)
