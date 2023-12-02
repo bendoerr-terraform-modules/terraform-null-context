@@ -50,7 +50,7 @@ consistent names and tags for different components.
 
 ## Usage
 
-```
+```terraform
 module "context" {
   source  = "bendoerr-terraform-modules/context/null"
   version = "xxx"
