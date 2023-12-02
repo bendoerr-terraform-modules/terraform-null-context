@@ -64,13 +64,15 @@ module "context" {
 
 ### Cost
 
-    Project: bendoerr-terraform-modules/terraform-null-context
+```text
+Project: bendoerr-terraform-modules/terraform-null-context
 
-     Name  Monthly Qty  Unit  Monthly Cost
+ Name  Monthly Qty  Unit  Monthly Cost
 
-     OVERALL TOTAL                   $0.00
-    ──────────────────────────────────
-    No cloud resources were detected
+ OVERALL TOTAL                   $0.00
+──────────────────────────────────
+No cloud resources were detected
+```
 
 This module creates no resources and will not generate any cost against any
 cloud provider you use.
