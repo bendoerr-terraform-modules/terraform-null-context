@@ -64,6 +64,8 @@ module "context" {
 
 ### Cost
 
+<a href="https://dashboard.infracost.io/org/bendoerr/repos/5577e589-2939-4c12-9494-a6caae1461d7?tab=settings"><img src="https://img.shields.io/endpoint?url=https://dashboard.api.infracost.io/shields/json/6e706676-64ba-43db-97b9-bd92f9272474/repos/5577e589-2939-4c12-9494-a6caae1461d7/branch/8eb9db05-875f-467d-8d66-6591e7a69ae6" alt="infracost"/></a>
+
 ```text
 Project: bendoerr-terraform-modules/terraform-null-context
 
