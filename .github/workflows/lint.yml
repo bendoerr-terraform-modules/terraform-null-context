@@ -69,8 +69,7 @@ jobs:
           filter_mode: file
           workdir: test/
           go_version_file: test/go.mod
-          golangci_lint_flags:
-            --verbose --presets
+          golangci_lint_flags: --verbose --presets
             bugs,comment,complexity,error,format,import,metalinter,module,performance,style,unused
             --fast --exclude-use-default --tests --timeout 120s ./...
   prettier:
