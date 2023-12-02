@@ -79,10 +79,11 @@ variable "instance_short" {
 
 variable "project" {
   type        = string
+  default     = ""
   description = <<-EOT
     Unique identifier for this project
     EOT
-  nullable    = false
+  nullable    = true
 }
 
 variable "attributes" {
