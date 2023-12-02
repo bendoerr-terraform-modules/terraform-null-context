@@ -98,9 +98,9 @@ cloud provider you use.
 | <a name="input_instance_short"></a> [instance_short](#input_instance_short) | Shortened version of the 'instance'.<br>Automatic shortening is done by removal of vowels.                                                                                                 | `string`       | `""`                                                                                                                                                                                                                                                                         |    no    |
 | <a name="input_namespace"></a> [namespace](#input_namespace)                | Element to ensure resources are generated with names that are globally<br>unique and do not collide. This should be a short key such as initials.                                          | `string`       | n/a                                                                                                                                                                                                                                                                          |   yes    |
 | <a name="input_project"></a> [project](#input_project)                      | Unique identifier for this project                                                                                                                                                         | `string`       | `""`                                                                                                                                                                                                                                                                         |    no    |
-| <a name="input_region"></a> [region](#input_region)                         | Key for the hosting provider region.                                                                                                                                                       | `string`       | `""`                                                                                                                                                                                                                                                                         |    no    |
+| <a name="input_region"></a> [region](#input_region)                         | Key for the hosting provider region.                                                                                                                                                       | `string`       | n/a                                                                                                                                                                                                                                                                          |   yes    |
 | <a name="input_region_short"></a> [region_short](#input_region_short)       | Shortened version of the 'region'.<br>Automatic shortening is done by removal of vowels unless handled by special<br>cases such as 'us-east-1' => 'ue1', or 'us-west-2' => 'uw2'.          | `string`       | `""`                                                                                                                                                                                                                                                                         |    no    |
-| <a name="input_role"></a> [role](#input_role)                               | A simple name for the hosting provider account or workspace. Included in<br>tags to ensure that identification is simple across accounts. Examples<br>'production', 'development', 'main'. | `string`       | `""`                                                                                                                                                                                                                                                                         |    no    |
+| <a name="input_role"></a> [role](#input_role)                               | A simple name for the hosting provider account or workspace. Included in<br>tags to ensure that identification is simple across accounts. Examples<br>'production', 'development', 'main'. | `string`       | n/a                                                                                                                                                                                                                                                                          |   yes    |
 | <a name="input_role_short"></a> [role_short](#input_role_short)             | Shortened version of the 'role'.<br>Automatic shortening is done by removal of vowels unless handled by special<br>cases such as 'production' => 'prod', or 'development' => 'dev'.        | `string`       | `""`                                                                                                                                                                                                                                                                         |    no    |
 | <a name="input_tags"></a> [tags](#input_tags)                               | Additional tags to include.                                                                                                                                                                | `map(string)`  | `{}`                                                                                                                                                                                                                                                                         |    no    |
 
@@ -126,11 +126,15 @@ cloud provider you use.
 
 ## Roadmap
 
+[<img alt="GitHub issues" src="https://img.shields.io/github/issues/bendoerr-terraform-modules/terraform-null-context?logo=github">](https://github.com/bendoerr-terraform-modules/terraform-null-context/issues)
+
 See the
 [open issues](https://github.com/bendoerr-terraform-modules/terraform-null-context/issues)
 for a list of proposed features (and known issues).
 
 ## Contributing
+
+[<img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/bendoerr-terraform-modules/terraform-null-context?logo=github">](https://github.com/bendoerr-terraform-modules/terraform-null-context/pulls)
 
 Contributions are what make the open source community such an amazing place to
 be learn, inspire, and create. Any contributions you make are **greatly
@@ -153,11 +157,15 @@ appreciated**.
 
 ## License
 
+[<img alt="GitHub License" src="https://img.shields.io/github/license/bendoerr-terraform-modules/terraform-null-context?logo=opensourceinitiative">](https://github.com/bendoerr-terraform-modules/terraform-null-context/blob/main/LICENSE.txt)
+
 Distributed under the MIT License. See
 [LICENSE](https://github.com/bendoerr-terraform-modules/terraform-null-context/blob/main/LICENSE.txt)
 for more information.
 
 ## Authors
+
+[<img alt="GitHub contributors" src="https://img.shields.io/github/contributors/bendoerr-terraform-modules/terraform-null-context?logo=github">](https://github.com/bendoerr-terraform-modules/terraform-null-context/graphs/contributors)
 
 - **Benjamin R. Doerr** - _Terraformer_ -
   [Benjamin R. Doerr](https://github.com/bendoerr/) - _Built Ben's Terraform
