@@ -160,7 +160,7 @@ func TestExamplesComplete(t *testing.T) {
 	}
 }
 
-func makediff(want interface{}, got interface{}) string {
+func makediff(want, got interface{}) string {
 	s := fmt.Sprintf("\nwant: %# v", pretty.Formatter(want))
 	s = fmt.Sprintf("%s\ngot: %# v", s, pretty.Formatter(got))
 	diffs := pretty.Diff(want, got)
