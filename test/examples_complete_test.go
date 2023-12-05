@@ -1,17 +1,16 @@
-package test
+package test_test
 
 import (
 	"fmt"
+	"reflect"
+	"testing"
+
 	"github.com/gruntwork-io/terratest/modules/terraform"
 	test_structure "github.com/gruntwork-io/terratest/modules/test-structure"
 	"github.com/kr/pretty"
-	"reflect"
-	"testing"
 )
 
 func TestExamplesComplete(t *testing.T) {
-	t.Parallel()
-
 	rootFolder := "../"
 	terraformFolderRelativeToRoot := "examples/complete"
 
@@ -31,6 +30,7 @@ func TestExamplesComplete(t *testing.T) {
 	terraform.InitAndApply(t, terraformOptions)
 
 	// Type for capturing shared context
+	//nolint:revive,stylecheck // These are external names
 	type shared struct {
 		Attributes     []string
 		Dns_Namespace  string
@@ -158,7 +158,6 @@ func TestExamplesComplete(t *testing.T) {
 			}
 		})
 	}
-
 }
 
 func makediff(want interface{}, got interface{}) string {

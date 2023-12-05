@@ -101,7 +101,7 @@ variable "tags" {
 }
 
 variable "context" {
-  type    = any
+  type = any
   default = {
     attributes     = []
     dns_namespace  = ""

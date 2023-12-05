@@ -25,7 +25,7 @@ locals {
     local.role_short,
     local.region_short,
     local.instance_short,
-  ) : format(
+    ) : format(
     # prd-ue1
     "%s-%s",
     local.role_short,
@@ -38,7 +38,7 @@ locals {
     "%s.%s",
     local.instance_short,
     local.region_short,
-  ) : format(
+    ) : format(
     # ue1
     "%s",
     local.region_short,
@@ -50,7 +50,7 @@ locals {
   instance_tags       = { "Instance" = local.gvn_instance }
   context_worksp_tags = { "Workspace" = terraform.workspace }
   project_tags        = { "Project" = var.project }
-  tags                = merge(
+  tags = merge(
     local.gvn_tags,
     local.gvn_role != "" ? local.role_tags : {},
     local.gvn_region != "" ? local.region_tags : {},
