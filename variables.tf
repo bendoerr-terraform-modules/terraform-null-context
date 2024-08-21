@@ -100,6 +100,13 @@ variable "tags" {
   nullable    = true
 }
 
+variable "long_dns" {
+  type        = bool
+  default     = false
+  description = "Use a dns_namespace that includes the namespace and role. The original dns_namespace was designed with namespace/role built-in to the DNS zone"
+  nullable    = false
+}
+
 variable "context" {
   type = any
   default = {
@@ -115,6 +122,7 @@ variable "context" {
     role_short     = ""
     project        = ""
     tags           = {}
+    long_dns       = false
   }
   description = "Allows the merging of an existing context with this one."
   nullable    = true

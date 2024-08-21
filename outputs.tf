@@ -44,7 +44,7 @@ output "project" {
 }
 
 output "dns_namespace" {
-  value       = local.dns_namespace
+  value       = var.long_dns ? local.long_dns_namespace : local.dns_namespace
   description = "A DNS namespace"
 }
 
@@ -65,7 +65,7 @@ output "shared" {
     role_short     = local.role_short
     region         = local.gvn_region
     region_short   = local.region_short
-    dns_namespace  = local.dns_namespace
+    dns_namespace  = var.long_dns ? local.long_dns_namespace : local.dns_namespace
     environment    = local.environment
     instance       = local.gvn_instance
     instance_short = local.instance_short
