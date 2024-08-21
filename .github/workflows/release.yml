@@ -9,11 +9,11 @@ permissions:
   contents: read
 
 jobs:
-  label:
+  release:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: read
+      contents: write
       pull-requests: write
       deployments: write
 
