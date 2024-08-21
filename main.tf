@@ -44,6 +44,21 @@ locals {
     local.region_short,
   )
 
+  long_dns_namespace = local.gvn_instance != "" ? format(
+    # main.ue1
+    "%s.%s.%s.%s",
+    local.instance_short,
+    local.region_short,
+    local.role_short,
+    local.gvn_namespace
+    ) : format(
+    # ue1
+    "%s.%s.%s",
+    local.region_short,
+    local.role_short,
+    local.gvn_namespace
+  )
+
   # Create tags
   role_tags           = { "Role" = local.gvn_role }
   region_tags         = { "Region" = local.gvn_region }

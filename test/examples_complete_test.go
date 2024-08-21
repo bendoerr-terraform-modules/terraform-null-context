@@ -44,6 +44,7 @@ func TestExamplesComplete(t *testing.T) {
 		Role_Short     string
 		Project        string
 		Tags           map[string]string
+		Long_DNS       bool
 	}
 
 	// Type for running tests
@@ -58,6 +59,32 @@ func TestExamplesComplete(t *testing.T) {
 					"attr1",
 				},
 				Dns_Namespace:  "dmo.uw2",
+				Environment:    "env",
+				Instance:       "demo",
+				Instance_Short: "dmo",
+				Namespace:      "ex",
+				Region:         "us-west-2",
+				Region_Short:   "uw2",
+				Role:           "production",
+				Role_Short:     "prd",
+				Project:        "test",
+				Tags: map[string]string{
+					"ExtraTag":  "ExtraTagValue",
+					"Instance":  "demo",
+					"Region":    "us-west-2",
+					"Role":      "production",
+					"Workspace": "default",
+					"Project":   "test",
+				},
+			},
+		},
+		{
+			outputVar: "ctx_full_long_dns_shared",
+			shared: shared{
+				Attributes: []string{
+					"attr1",
+				},
+				Dns_Namespace:  "dmo.uw2.prd.ex",
 				Environment:    "env",
 				Instance:       "demo",
 				Instance_Short: "dmo",
@@ -164,7 +191,7 @@ func makediff(want, got interface{}) string {
 	s := fmt.Sprintf("\nwant: %# v", pretty.Formatter(want))
 	s = fmt.Sprintf("%s\ngot: %# v", s, pretty.Formatter(got))
 	diffs := pretty.Diff(want, got)
-	s = fmt.Sprintf("%s\ndifferences: ", s)
+	s += "\ndifferences: "
 	for _, d := range diffs {
 		s = fmt.Sprintf("%s\n  - %s", s, d)
 	}
