@@ -293,7 +293,7 @@ linters:
     #- structcheck # [deprecated, replaced by unused] finds unused struct fields
     #- varcheck # [deprecated, replaced by unused] finds unused global variables and constants
     #- execinquery # [deprecated, repository has been archived] checks query string in Query function which reads your Go src files and warning it finds
-    #- mnd # [deprecated, replaced by mnd] detects magic numbers
+    #- gomnd # [deprecated, replaced by mnd] detects magic numbers
     #- exportloopref # [deprecated, replaced by copyloopvar] checks for pointers to enclosing loop variables
 
 issues:
