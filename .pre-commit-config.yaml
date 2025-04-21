@@ -1,11 +1,11 @@
 repos:
   - repo: https://github.com/gitleaks/gitleaks
-    rev: v8.18.1
+    rev: ee6b38352380ce52369d16b7873093c4b8bf829b # frozen: v8.24.3
     hooks:
       - id: gitleaks
 
   - repo: https://github.com/gruntwork-io/pre-commit
-    rev: v0.1.23
+    rev: d9196b3a0a6fbc530f2bacea36c11a3b0214ff13 # frozen: v0.1.28
     hooks:
       - id: terraform-fmt
       - id: terraform-validate
@@ -13,7 +13,7 @@ repos:
       - id: shellcheck
 
   - repo: https://github.com/mxab/pre-commit-trivy.git
-    rev: v0.9.0
+    rev: a804ee07a4c0c0793d3698a8936dea8d79116614 # frozen: v0.15.0
     hooks:
       - id: trivyfs-docker
         args: ["."]
@@ -35,7 +35,7 @@ repos:
   #          ]
 
   - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: "v3.1.0"
+    rev: "f12edd9c7be1c20cfa42420fd0e6df71e42b51ea" # frozen: v4.0.0-alpha.8
     hooks:
       - id: prettier
         exclude_types:
@@ -47,18 +47,18 @@ repos:
         args: ["--prose-wrap", "always"]
 
   - repo: https://github.com/golangci/golangci-lint
-    rev: v1.55.2
+    rev: 00a561d9a79578a2800dece2f04c60ad479a3798 # frozen: v2.1.2
     hooks:
       - id: golangci-lint-full
         entry: bash -c 'cd test && golangci-lint run --fix'
 
   - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.37.0
+    rev: 586c3ea3f51230da42bab657c6a32e9e66c364f0 # frozen: v0.44.0
     hooks:
       - id: markdownlint-fix-docker
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.5.0
+    rev: cef0300fd0fc4d2a87a85fa2093c6b283ea36f4b # frozen: v5.0.0
     hooks:
       - id: check-json
       - id: check-toml
