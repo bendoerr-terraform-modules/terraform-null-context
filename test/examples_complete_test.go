@@ -30,7 +30,7 @@ func TestExamplesComplete(t *testing.T) {
 	terraform.InitAndApply(t, terraformOptions)
 
 	// Type for capturing shared context
-	//nolint:revive,stylecheck // These are external names
+	//nolint:revive,staticcheck // These are external names
 	type shared struct {
 		Attributes     []string
 		Dns_Namespace  string
