@@ -49,6 +49,7 @@ repos:
   - repo: https://github.com/golangci/golangci-lint
     rev: 00a561d9a79578a2800dece2f04c60ad479a3798 # frozen: v2.1.2
     hooks:
+      - id: golangci-lint
       - id: golangci-lint-full
         entry: bash -c 'cd test && golangci-lint run --fix'
 
