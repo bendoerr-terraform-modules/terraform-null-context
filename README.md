@@ -79,6 +79,24 @@ No cloud resources were detected
 This module creates no resources and will not generate any cost against any
 cloud provider you use.
 
+## Version Constraints
+
+This is a **providerless utility module** — it composes a normalized naming and
+tagging context from input variables and creates no resources, so it declares no
+`required_providers`. The only version constraint it sets is on Terraform core:
+
+```hcl
+terraform {
+  required_version = ">= 0.13"
+}
+```
+
+The wider `bendoerr-terraform-modules` collection uses **pessimistic version
+constraints** (`~>`) on the AWS provider for the modules that manage real
+resources, so that major-version upgrades are explicit, tested steps rather than
+automatic bumps. This module has no provider to pin, so it stays out of that
+concern entirely and imposes no provider-version requirements on its consumers.
+
 <!-- BEGIN_TF_DOCS -->
 
 ### Requirements
