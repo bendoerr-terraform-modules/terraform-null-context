@@ -9,7 +9,7 @@
 
 <h3 align="center">Ben's Terraform Null Context Module</h3>
 
-  <p align="center">
+<p align="center">
     This is how I do it.
     <br/>
     <br/>
@@ -101,44 +101,57 @@ concern entirely and imposes no provider-version requirements on its consumers.
 
 ### Requirements
 
-| Name                                                                     | Version |
-| ------------------------------------------------------------------------ | ------- |
+| Name | Version |
+| ---- | ------- |
 | <a name="requirement_terraform"></a> [terraform](#requirement_terraform) | >= 0.13 |
+
+### Providers
+
+No providers.
+
+### Modules
+
+No modules.
+
+### Resources
+
+No resources.
 
 ### Inputs
 
-| Name                                                                        | Description                                                                                                                                                                                | Type           | Default                                                                                                                                                                                                                                                                      | Required |
-| --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------: |
-| <a name="input_attributes"></a> [attributes](#input_attributes)             | Additional id elements that would be appended.                                                                                                                                             | `list(string)` | `[]`                                                                                                                                                                                                                                                                         |    no    |
-| <a name="input_context"></a> [context](#input_context)                      | Allows the merging of an existing context with this one.                                                                                                                                   | `any`          | <pre>{<br> "attributes": [],<br> "dns_namespace": "",<br> "environment": "",<br> "instance": "",<br> "instance_short": "",<br> "namespace": "",<br> "project": "",<br> "region": "",<br> "region_short": "",<br> "role": "",<br> "role_short": "",<br> "tags": {}<br>}</pre> |    no    |
-| <a name="input_environment"></a> [environment](#input_environment)          | Element to identify the region and/or the role. If not provided this element<br>defaults to <role_short>-<region_short>(-<instance_short>).                                                | `string`       | `""`                                                                                                                                                                                                                                                                         |    no    |
-| <a name="input_instance"></a> [instance](#input_instance)                   | Element to identify a tenant or copy of an environment (blue-green<br>deployments). This is not used often.                                                                                | `string`       | `""`                                                                                                                                                                                                                                                                         |    no    |
-| <a name="input_instance_short"></a> [instance_short](#input_instance_short) | Shortened version of the 'instance'.<br>Automatic shortening is done by removal of vowels.                                                                                                 | `string`       | `""`                                                                                                                                                                                                                                                                         |    no    |
-| <a name="input_namespace"></a> [namespace](#input_namespace)                | Element to ensure resources are generated with names that are globally<br>unique and do not collide. This should be a short key such as initials.                                          | `string`       | n/a                                                                                                                                                                                                                                                                          |   yes    |
-| <a name="input_project"></a> [project](#input_project)                      | Unique identifier for this project                                                                                                                                                         | `string`       | `""`                                                                                                                                                                                                                                                                         |    no    |
-| <a name="input_region"></a> [region](#input_region)                         | Key for the hosting provider region.                                                                                                                                                       | `string`       | n/a                                                                                                                                                                                                                                                                          |   yes    |
-| <a name="input_region_short"></a> [region_short](#input_region_short)       | Shortened version of the 'region'.<br>Automatic shortening is done by removal of vowels unless handled by special<br>cases such as 'us-east-1' => 'ue1', or 'us-west-2' => 'uw2'.          | `string`       | `""`                                                                                                                                                                                                                                                                         |    no    |
-| <a name="input_role"></a> [role](#input_role)                               | A simple name for the hosting provider account or workspace. Included in<br>tags to ensure that identification is simple across accounts. Examples<br>'production', 'development', 'main'. | `string`       | n/a                                                                                                                                                                                                                                                                          |   yes    |
-| <a name="input_role_short"></a> [role_short](#input_role_short)             | Shortened version of the 'role'.<br>Automatic shortening is done by removal of vowels unless handled by special<br>cases such as 'production' => 'prod', or 'development' => 'dev'.        | `string`       | `""`                                                                                                                                                                                                                                                                         |    no    |
-| <a name="input_tags"></a> [tags](#input_tags)                               | Additional tags to include.                                                                                                                                                                | `map(string)`  | `{}`                                                                                                                                                                                                                                                                         |    no    |
+| Name | Description | Type | Default | Required |
+| ---- | ----------- | ---- | ------- | :------: |
+| <a name="input_attributes"></a> [attributes](#input_attributes) | Additional id elements that would be appended. | `list(string)` | `[]` | no |
+| <a name="input_context"></a> [context](#input_context) | Allows the merging of an existing context with this one. | `any` | <pre>{<br/>  "attributes": \[\],<br/>  "dns_namespace": "",<br/>  "environment": "",<br/>  "instance": "",<br/>  "instance_short": "",<br/>  "long_dns": false,<br/>  "namespace": "",<br/>  "project": "",<br/>  "region": "",<br/>  "region_short": "",<br/>  "role": "",<br/>  "role_short": "",<br/>  "tags": {}<br/>}</pre> | no |
+| <a name="input_environment"></a> [environment](#input_environment) | Element to identify the region and/or the role. If not provided this element<br/>defaults to \<role_short>-\<region_short>(-\<instance_short>). | `string` | `""` | no |
+| <a name="input_instance"></a> [instance](#input_instance) | Element to identify a tenant or copy of an environment (blue-green<br/>deployments). This is not used often. | `string` | `""` | no |
+| <a name="input_instance_short"></a> [instance_short](#input_instance_short) | Shortened version of the 'instance'.<br/>Automatic shortening is done by removal of vowels. | `string` | `""` | no |
+| <a name="input_long_dns"></a> [long_dns](#input_long_dns) | Use a dns_namespace that includes the namespace and role. The original dns_namespace was designed with namespace/role built-in to the DNS zone | `bool` | `false` | no |
+| <a name="input_namespace"></a> [namespace](#input_namespace) | Element to ensure resources are generated with names that are globally<br/>unique and do not collide. This should be a short key such as initials. | `string` | n/a | yes |
+| <a name="input_project"></a> [project](#input_project) | Unique identifier for this project | `string` | `""` | no |
+| <a name="input_region"></a> [region](#input_region) | Key for the hosting provider region. | `string` | n/a | yes |
+| <a name="input_region_short"></a> [region_short](#input_region_short) | Shortened version of the 'region'.<br/>Automatic shortening is done by removal of vowels unless handled by special<br/>cases such as 'us-east-1' => 'ue1', or 'us-west-2' => 'uw2'. | `string` | `""` | no |
+| <a name="input_role"></a> [role](#input_role) | A simple name for the hosting provider account or workspace. Included in<br/>tags to ensure that identification is simple across accounts. Examples<br/>'production', 'development', 'main'. | `string` | n/a | yes |
+| <a name="input_role_short"></a> [role_short](#input_role_short) | Shortened version of the 'role'.<br/>Automatic shortening is done by removal of vowels unless handled by special<br/>cases such as 'production' => 'prod', or 'development' => 'dev'. | `string` | `""` | no |
+| <a name="input_tags"></a> [tags](#input_tags) | Additional tags to include. | `map(string)` | `{}` | no |
 
 ### Outputs
 
-| Name                                                                          | Description                                     |
-| ----------------------------------------------------------------------------- | ----------------------------------------------- |
-| <a name="output_attributes"></a> [attributes](#output_attributes)             | The evaluated attributes                        |
-| <a name="output_dns_namespace"></a> [dns_namespace](#output_dns_namespace)    | A DNS namespace                                 |
-| <a name="output_environment"></a> [environment](#output_environment)          | The evaluated environment                       |
-| <a name="output_instance"></a> [instance](#output_instance)                   | The evaluated instance                          |
-| <a name="output_instance_short"></a> [instance_short](#output_instance_short) | The evaluated instance                          |
-| <a name="output_namespace"></a> [namespace](#output_namespace)                | The evaluated namespace                         |
-| <a name="output_project"></a> [project](#output_project)                      | The evaluated project                           |
-| <a name="output_region"></a> [region](#output_region)                         | The evaluated region                            |
-| <a name="output_region_short"></a> [region_short](#output_region_short)       | The evaluated region                            |
-| <a name="output_role"></a> [role](#output_role)                               | The evaluated role                              |
-| <a name="output_role_short"></a> [role_short](#output_role_short)             | The evaluated role                              |
-| <a name="output_shared"></a> [shared](#output_shared)                         | Used for sharing the context with other modules |
-| <a name="output_tags"></a> [tags](#output_tags)                               | The evaluated tags                              |
+| Name | Description |
+| ---- | ----------- |
+| <a name="output_attributes"></a> [attributes](#output_attributes) | The evaluated attributes |
+| <a name="output_dns_namespace"></a> [dns_namespace](#output_dns_namespace) | A DNS namespace |
+| <a name="output_environment"></a> [environment](#output_environment) | The evaluated environment |
+| <a name="output_instance"></a> [instance](#output_instance) | The evaluated instance |
+| <a name="output_instance_short"></a> [instance_short](#output_instance_short) | The evaluated instance |
+| <a name="output_namespace"></a> [namespace](#output_namespace) | The evaluated namespace |
+| <a name="output_project"></a> [project](#output_project) | The evaluated project |
+| <a name="output_region"></a> [region](#output_region) | The evaluated region |
+| <a name="output_region_short"></a> [region_short](#output_region_short) | The evaluated region |
+| <a name="output_role"></a> [role](#output_role) | The evaluated role |
+| <a name="output_role_short"></a> [role_short](#output_role_short) | The evaluated role |
+| <a name="output_shared"></a> [shared](#output_shared) | Used for sharing the context with other modules |
+| <a name="output_tags"></a> [tags](#output_tags) | The evaluated tags |
 
 <!-- END_TF_DOCS -->
 
@@ -168,10 +181,10 @@ appreciated**.
 ### Creating A Pull Request
 
 1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+1. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+1. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+1. Push to the Branch (`git push origin feature/AmazingFeature`)
+1. Open a Pull Request
 
 ## License
 
