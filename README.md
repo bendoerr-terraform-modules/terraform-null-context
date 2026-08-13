@@ -103,7 +103,7 @@ concern entirely and imposes no provider-version requirements on its consumers.
 
 | Name | Version |
 | ---- | ------- |
-| <a name="requirement_terraform"></a> [terraform](#requirement_terraform) | >= 0.13 |
+| <a name="requirement_terraform"></a> [terraform](#requirement_terraform) | >= 0.13.0 |
 
 ### Providers
 
