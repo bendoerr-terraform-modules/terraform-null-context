@@ -87,7 +87,7 @@ tagging context from input variables and creates no resources, so it declares no
 
 ```hcl
 terraform {
-  required_version = ">= 0.13"
+  required_version = ">= 0.13.0"
 }
 ```
 
